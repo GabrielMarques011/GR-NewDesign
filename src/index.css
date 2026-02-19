@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 15% 97%;
+    --foreground: 260 20% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 260 20% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 20% 20%;
+
+    --primary: 258 20% 31%;
+    --primary-foreground: 260 30% 96%;
+
+    --secondary: 272 25% 69%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 270 20% 92%;
+    --muted-foreground: 258 15% 45%;
+
+    --accent: 274 22% 67%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 270 15% 85%;
+    --input: 270 15% 85%;
+    --ring: 258 20% 31%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 258 20% 31%;
+    --sidebar-foreground: 260 30% 96%;
+    --sidebar-primary: 272 25% 69%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 274 22% 67%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 270 15% 85%;
+    --sidebar-ring: 258 20% 31%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(270 20% 92%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(272 25% 69%);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(258 20% 31%);
+}
