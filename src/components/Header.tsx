@@ -1,6 +1,8 @@
 import { ShoppingCart } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 
+import logo from "../assets/LogoBIG.png";
+
 const Header = () => {
   const { items } = useCart();
   const totalItems = items.reduce((sum, i) => sum + i.quantity, 0);
@@ -9,7 +11,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-[#ffffff] text-primary-foreground shadow-lg">
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         <a href="#inicio" className="text-2xl font-bold tracking-tight">
-          <img src="/src/assets/LogoBIG.png" alt="GR Design Logo" className="mr-2 h-20 w-55" />
+          <img src={logo} alt="GR Design Logo" className="mr-2 h-20 w-55" />
           {/* <span className="text-secondary">GR</span> Design */}
         </a>
 
